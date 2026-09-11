@@ -1,5 +1,11 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.9
+
+- Corrige o alvo do ajuste: fundo da aba ativa arredondada em `#3B413E`,
+  mais escuro e neutro. Somente `modernEditorTab.activeBackground` foi acrescentado;
+  a linha superior ajustada antes não controlava esse fundo.
+
 ## 0.2.2-dev.8
 
 - Apenas a linha superior da aba ativa: verde mais escuro e menos saturado,

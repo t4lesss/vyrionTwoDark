@@ -1,4 +1,10 @@
-# Interface em marfim e oliva — 0.2.2-dev.8
+# Interface em marfim e oliva — 0.2.2-dev.9
+
+**Correção em dev.9:** a imagem do usuário mostra abas arredondadas da interface
+moderna. O alvo é o fundo da aba ativa, controlado por
+`modernEditorTab.activeBackground`, agora `#3B413E`. As verificações anteriores
+de `tab.activeBorderTop` cobriam a linha do estilo antigo, não esse preenchimento.
+Ao conferir abas, reproduza o estilo da janela do usuário no perfil de teste.
 
 A referência do usuário foi o cabeçalho da tela de extensões: texto quente,
 iluminado e legível, sem branco puro ou amarelo intenso. Na revisão, ele pediu
@@ -57,6 +63,7 @@ o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 | Seleção / foco de listas | `#495E55` | Tom secundário mais marcado no item ativo, mesmo sem foco no menu. |
 | Texto / contorno de listas em destaque | `#FFFBF0` / `#A5C0B1` | Texto claro e contorno secundário suavizado. |
 | Linha superior da aba ativa | `#858B8080` | Verde escuro e acinzentado com cerca de 50% de opacidade, específico das abas do editor. |
+| Fundo da aba ativa moderna | `#3B413E` | Cinza escuro, levemente esverdeado, exclusivo da aba ativa arredondada. |
 | Foco | `#AABD73` | Identificação do controle que recebe o teclado. |
 
 O título da extensão e Installation, Marketplace, Categories e Resources não
@@ -154,6 +161,13 @@ SIZE e a faixa da aba. Captura examinada e resultados em
 Em `dev.8`, somente `tab.activeBorderTop` mudou na paleta. A comparação integral
 do tema confirmou o escopo, e o renderer mostrou `rgba(133, 139, 128, 0.5)` na
 faixa da aba. Captura e conferência em `.vscode-test/active-tab-muted/`.
+
+Em `dev.9`, o perfil isolado ativou `workbench.experimental.modernUI` para
+reproduzir as abas da imagem. A versão `dev.8` mostrou o fundo real `#495E55`;
+`dev.9` mostrou `#3B413E`. A aba inativa, o texto, o hover e as cores compartilhadas
+de listas, links e botões permaneceram iguais. Só
+`modernEditorTab.activeBackground` foi acrescentado à paleta. Antes/depois e
+resultados em `.vscode-test/modern-active-tab/`.
 
 `npm run package` validou a tipagem e gerou o VSIX com as duas camadas de tema.
 A base upstream e o componente de caixas não foram alterados. Estas medidas

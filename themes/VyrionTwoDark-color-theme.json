@@ -75,7 +75,8 @@
     "list.focusBackground": "#495E55",
     "list.focusOutline": "#A5C0B1",
     "list.focusAndSelectionOutline": "#A5C0B1",
-    "tab.activeBorderTop": "#858B8080"
+    "tab.activeBorderTop": "#858B8080",
+    "modernEditorTab.activeBackground": "#3B413E"
   },
   "tokenColors": []
 }
