@@ -18,6 +18,11 @@ Executada em 2026-09-11 UTC (2026-09-10 no horário de São Paulo), com VS Code
   selecionar cada tema, o comando nativo **Generate Color Theme From Current
   Settings** gerou snapshots iguais: 70 cores explícitas exportadas e 215 regras
   de tokens, incluindo regras adicionadas pelo próprio VS Code.
+- Um segundo teste nativo abriu o workspace real com suas duas pastas: digitar
+  no arquivo-base de `origem/` não alterou o documento; digitar na camada do fork
+  funcionou, e a edição não salva foi revertida. Ambos os arquivos permaneceram
+  intactos em disco. A regra usa `/**/origem/**`, pois padrões relativos são
+  avaliados dentro de cada raiz do workspace.
 
 A instância de verificação usou dados de usuário temporários, sem personalizações
 pessoais de cores ou extensões de linguagem de terceiros. As extensões embutidas
@@ -25,5 +30,5 @@ do VS Code permaneceram disponíveis. O gerador compara cores e regras exportada
 isso não substitui a revisão visual das futuras mudanças em cada linguagem.
 
 Os snapshots e o resultado bruto desta execução ficam localmente em
-`.vscode-test/baseline/`, ignorado pelo Git. O workspace real foi configurado
+`.vscode-test/baseline/` e `.vscode-test/workspace/`, ignorados pelo Git. O workspace real foi configurado
 para manter o original como referência e os ajustes na camada própria do fork.

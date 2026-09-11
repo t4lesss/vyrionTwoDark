@@ -11,7 +11,7 @@
   ],
   "settings": {
     "files.readonlyInclude": {
-      "**/origem/**": true
+      "/**/origem/**": true
     }
   }
 }
