@@ -1,5 +1,10 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.2
+
+- Botões comuns da tela de extensões agora usam o mesmo verde de Run and Debug,
+  com rótulos claros e hover correspondente.
+
 ## 0.2.2-dev.1
 
 - Verde dos botões principais extraído da referência: `#6A6E23`.

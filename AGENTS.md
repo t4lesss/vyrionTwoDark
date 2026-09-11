@@ -18,6 +18,8 @@ de adoção documentado em `docs/development.md`.
 - Nas iterações locais, avance apenas `dev.N` com `npm run version:iteration`.
   A série atual é `0.2.2-dev.N`; reserve versões estáveis para marcos consolidados.
   Siga a ordem e os limites de distribuição em `docs/development.md`.
+- Botões comuns e proeminentes da tela de extensões devem compartilhar o verde
+  dos botões principais, como Run and Debug. Não os mapear para o fundo secundário.
 - Para cores, valide JSON, empacote com `npm run package` e confira visualmente
   as linguagens/componentes afetados em F5. Não crie testes que só reproduzam cores.
 - Para a lógica das caixas, execute os casos com gramáticas reais de

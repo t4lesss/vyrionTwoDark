@@ -1,4 +1,4 @@
-# Interface em marfim e oliva — 0.2.2-dev.1
+# Interface em marfim e oliva — 0.2.2-dev.2
 
 A referência do usuário foi o cabeçalho da tela de extensões: texto quente,
 iluminado e legível, sem branco puro ou amarelo intenso. Na revisão, ele pediu
@@ -17,10 +17,10 @@ o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 | Texto principal | `#E8E1D1` | Editor sem cor sintática específica, listas, campos, controles e terminal. |
 | Texto secundário | `#CEC6B6` | Descrições, abas inativas, breadcrumbs e placeholders. |
 | Texto discreto | `#ABA799` | Números de linha e foreground de elementos desativados. |
-| Botão principal | `#6A6E23` | Verde extraído da referência para ações principais/proeminentes. |
+| Botão principal | `#6A6E23` | Verde da referência para ações principais e todos os botões da tela de extensões. |
 | Hover principal | `#72762A` | Variação próxima e mais clara ao passar o mouse. |
 | Texto dos botões | `#FFFBF0` | Rótulos quase brancos nos botões principais e secundários. |
-| Botão secundário | `#3F412A` | Variação escura para ações como desativar/desinstalar extensões. |
+| Botão secundário | `#3F412A` | Variação escura para controles secundários comuns, fora da tela de extensões. |
 | Hover secundário | `#4A4D2D` | Mais luminoso, preservando a diferença para ações principais. |
 | Borda dos botões | `#98A34F` | Contorno oliva mais luminoso. |
 | Links / links ativos | `#B9CD83` / `#D2E29F` | Verde claro para navegação. |
@@ -33,7 +33,12 @@ entre texto principal, secundário e títulos. Não há CSS injetado.
 
 `button.*` estiliza os controles comuns; `extensionButton.*` cobre os controles
 da tela de extensões. A distinção é necessária porque a base tem regras próprias
-para botões proeminentes. As caixas de seleção usam verde discreto no fundo,
+para botões proeminentes. Por correção explícita do usuário em `dev.2`, tanto
+`extensionButton.background` quanto `extensionButton.prominentBackground` usam
+o verde de `button.background`; o mesmo vale para o hover. Ações como Set Color
+Theme, Disable e Uninstall devem compartilhar esse verde, sem receber o tom
+escuro de `button.secondaryBackground`.
+As caixas de seleção usam verde discreto no fundo,
 marca clara e contorno visível. Estados desativados ainda podem receber opacidade
 adicional do próprio VS Code.
 
@@ -67,6 +72,12 @@ O VS Code 1.136.1 aceitou a instalação local com esse sufixo e exibiu a versã
 na página da extensão. Os botões reais confirmaram o verde e os rótulos novos,
 incluindo hover de ações principais e secundárias; as três caixas da amostra
 Python continuaram presentes.
+
+A correção `0.2.2-dev.2` foi conferida no mesmo VS Code: Set Color Theme,
+Disable e Uninstall apresentaram o mesmo fundo e texto do botão Open Folder.
+O hover de Set Color Theme também coincidiu com o de Open Folder. A captura
+da tela de extensões foi examinada, e as três caixas Python permaneceram
+presentes. Resultados e capturas estão em `.vscode-test/extension-buttons/`.
 
 `npm run package` validou a tipagem e gerou o VSIX com as duas camadas de tema.
 A base upstream e o componente de caixas não foram alterados. Estas medidas
