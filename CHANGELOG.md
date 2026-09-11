@@ -1,5 +1,10 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.8
+
+- Apenas a linha superior da aba ativa: verde mais escuro e menos saturado,
+  com aproximadamente 50% de opacidade.
+
 ## 0.2.2-dev.7
 
 - Tom secundário do menu menos saturado no hover, seleção e contorno,

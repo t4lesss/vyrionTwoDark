@@ -1,4 +1,4 @@
-# Interface em marfim e oliva — 0.2.2-dev.7
+# Interface em marfim e oliva — 0.2.2-dev.8
 
 A referência do usuário foi o cabeçalho da tela de extensões: texto quente,
 iluminado e legível, sem branco puro ou amarelo intenso. Na revisão, ele pediu
@@ -56,7 +56,7 @@ o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 | Hover de listas | `#394842` | Variação escura e menos saturada do tom secundário. |
 | Seleção / foco de listas | `#495E55` | Tom secundário mais marcado no item ativo, mesmo sem foco no menu. |
 | Texto / contorno de listas em destaque | `#FFFBF0` / `#A5C0B1` | Texto claro e contorno secundário suavizado. |
-| Linha superior da aba ativa | `#A4AD8E` | Verde menos saturado, específico das abas do editor. |
+| Linha superior da aba ativa | `#858B8080` | Verde escuro e acinzentado com cerca de 50% de opacidade, específico das abas do editor. |
 | Foco | `#AABD73` | Identificação do controle que recebe o teclado. |
 
 O título da extensão e Installation, Marketplace, Categories e Resources não
@@ -150,6 +150,10 @@ permaneceu nas cores anteriores. Capturas examinadas e resultados em
 A revisão `0.2.2-dev.7` confirmou os estados reais do menu, a seleção sem foco,
 SIZE e a faixa da aba. Captura examinada e resultados em
 `.vscode-test/secondary-menu-soft/`.
+
+Em `dev.8`, somente `tab.activeBorderTop` mudou na paleta. A comparação integral
+do tema confirmou o escopo, e o renderer mostrou `rgba(133, 139, 128, 0.5)` na
+faixa da aba. Captura e conferência em `.vscode-test/active-tab-muted/`.
 
 `npm run package` validou a tipagem e gerou o VSIX com as duas camadas de tema.
 A base upstream e o componente de caixas não foram alterados. Estas medidas
