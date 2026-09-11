@@ -1,4 +1,4 @@
-# Interface em marfim e oliva — 0.2.2-dev.5
+# Interface em marfim e oliva — 0.2.2-dev.6
 
 A referência do usuário foi o cabeçalho da tela de extensões: texto quente,
 iluminado e legível, sem branco puro ou amarelo intenso. Na revisão, ele pediu
@@ -25,6 +25,12 @@ contorno de foco `#98A34F`. A seleção conserva o fundo quando o menu perde foc
 Essas regras também afetam outras listas, incluindo Explorer e extensões;
 o VS Code não expõe um conjunto de cores exclusivo desse menu.
 
+Em `dev.6`, o usuário escolheu o tom secundário para o menu: hover `#364B43`,
+seleção/foco `#446356` e contorno `#9FC6B1`. São variações escuras da cor dos
+links. Ele esclareceu que a aba a desaturar era a do topo do VS Code:
+`tab.activeBorderTop` usa `#A4AD8E`, verde acinzentado. Essa cor pertence às abas
+do editor e não modifica o foco geral, os botões ou a navegação Details/Features.
+
 As cores vivem em `themes/VyrionTwoDark-color-theme.json`. A interface acompanha
 o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 
@@ -43,9 +49,10 @@ o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 | Hover secundário | `#2F311F` | Variação mais escura do botão secundário. |
 | Borda dos botões | `#98A34F` | Contorno oliva mais luminoso. |
 | Links / links ativos | `#9FC6B1` / `#BEDDCC` | Variação mais luminosa e saturada da referência; inclui SIZE. |
-| Hover de listas | `#3D4535` | Oliva discreto, visível sobre as superfícies escuras. |
-| Seleção / foco de listas | `#555F2B` | Oliva mais marcado no item ativo, mesmo sem foco no menu. |
-| Texto / contorno de listas em destaque | `#FFFBF0` / `#98A34F` | Texto claro e contorno de foco. |
+| Hover de listas | `#364B43` | Variação escura do tom secundário. |
+| Seleção / foco de listas | `#446356` | Tom secundário mais marcado no item ativo, mesmo sem foco no menu. |
+| Texto / contorno de listas em destaque | `#FFFBF0` / `#9FC6B1` | Texto claro e contorno na cor secundária. |
+| Linha superior da aba ativa | `#A4AD8E` | Verde menos saturado, específico das abas do editor. |
 | Foco | `#AABD73` | Identificação do controle que recebe o teclado. |
 
 O título da extensão e Installation, Marketplace, Categories e Resources não
@@ -80,7 +87,7 @@ Razões calculadas pela luminância relativa sRGB, com cores opacas:
 | Botão principal normal / hover | 5,25:1 / 8,36:1 |
 | Botão secundário normal / hover | 10,15:1 / 12,85:1 |
 | Link normal / ativo sobre `#282C34` | 7,46:1 / 9,60:1 |
-| Texto de lista em hover / seleção | 9,67:1 / 6,64:1 |
+| Texto de lista em hover / seleção | 9,05:1 / 6,42:1 |
 
 Na imagem de referência, a combinação dominante do rótulo/fundo era 3,96:1.
 Clarear o rótulo eleva esse contraste mantendo o verde principal exato.
@@ -129,6 +136,12 @@ Commands permanecia ativo e seleção preservada após perder foco. SIZE normal
 e em hover foi conferido na página do fork. Capturas examinadas e resultados
 em `.vscode-test/features-menu-links/`. A coleta lê o rótulo visível do item,
 pois o DOM também contém textos de estado ocultos.
+
+Em `0.2.2-dev.6`, o renderer confirmou hover/seleção no tom secundário, contorno
+correspondente e seleção preservada sem foco. A faixa real no topo da aba ativa
+usa `#A4AD8E`, enquanto `focusBorder` continua `#AABD73`. SIZE normal/hover
+permaneceu nas cores anteriores. Capturas examinadas e resultados em
+`.vscode-test/secondary-menu-tab/`.
 
 `npm run package` validou a tipagem e gerou o VSIX com as duas camadas de tema.
 A base upstream e o componente de caixas não foram alterados. Estas medidas

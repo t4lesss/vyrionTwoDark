@@ -69,12 +69,13 @@
     "checkbox.background": "#6A6E23",
     "checkbox.foreground": "#FFFBF0",
     "checkbox.border": "#98A34F",
-    "list.hoverBackground": "#3D4535",
-    "list.activeSelectionBackground": "#555F2B",
-    "list.inactiveSelectionBackground": "#555F2B",
-    "list.focusBackground": "#555F2B",
-    "list.focusOutline": "#98A34F",
-    "list.focusAndSelectionOutline": "#98A34F"
+    "list.hoverBackground": "#364B43",
+    "list.activeSelectionBackground": "#446356",
+    "list.inactiveSelectionBackground": "#446356",
+    "list.focusBackground": "#446356",
+    "list.focusOutline": "#9FC6B1",
+    "list.focusAndSelectionOutline": "#9FC6B1",
+    "tab.activeBorderTop": "#A4AD8E"
   },
   "tokenColors": []
 }

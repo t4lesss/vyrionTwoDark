@@ -1,5 +1,12 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.6
+
+- Menu Features e outras listas passam do oliva para variações escuras do tom
+  secundário, com hover e seleção distintos.
+- Linha superior da aba ativa em verde menos saturado, por uma cor própria
+  das abas do editor.
+
 ## 0.2.2-dev.5
 
 - Hover e seleção do menu Features mais visíveis, com fundos oliva distintos
