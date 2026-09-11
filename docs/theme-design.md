@@ -5,6 +5,10 @@ a palavra que introduz uma função recebe o mesmo estilo em cada linguagem.
 O usuário definiu Python, Rust, TypeScript, Go, C, C++ e Dart/Flutter como
 prioridades e especificou fundo quase branco, letras verdes e cantos arredondados.
 
+A versão 0.2.1 acrescenta uma [paleta de interface](interface-palette.md) com
+marfim quente e botões oliva. O texto normal do editor usa o off-white principal;
+os papéis sintáticos e as caixas de função continuam com seus estilos próprios.
+
 ## Regra adotada na versão 0.2.0
 
 | Papel | Aparência | Exemplos |

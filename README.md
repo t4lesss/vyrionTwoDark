@@ -1,8 +1,10 @@
 # Vyrion Two Dark
 
 Fork incremental do [Atom One Dark](https://github.com/akamud/vscode-theme-onedark)
-para VS Code. A versão 0.2.0 acrescenta caixas claras, com letras verdes e cantos
-arredondados, às palavras que introduzem funções: `def`, `fn`, `function` e `func`.
+para VS Code. A versão 0.2.1 combina texto em off-white quente com botões verde
+oliva e preserva as caixas claras das palavras de função: `def`, `fn`, `function`
+e `func`. Os títulos têm um marfim um pouco mais quente, com variações de verde
+para ações principais, secundárias e hover.
 
 O arquivo `themes/OneDark.json` pertence à base upstream. As personalizações
 ficam em [themes/VyrionTwoDark-color-theme.json](themes/VyrionTwoDark-color-theme.json),
@@ -29,6 +31,9 @@ consulte o [planejamento das regras](docs/theme-design.md). Ele separa papéis
 visuais, TextMate e realce semântico, com exemplos conferidos para Python,
 Rust, TypeScript, Go, C, C++ e Dart/Flutter. As [amostras](samples/README.md)
 organizam a revisão por linguagem.
+
+A [paleta da interface](docs/interface-palette.md) registra as cores, seus papéis
+e o contraste conferido sobre os fundos do tema.
 
 1. Execute `npm ci` com Node.js 24. Abra o fork ou o workspace e pressione **F5**,
    escolhendo **Vyrion Two Dark: experimentar tema**. A tarefa compila o componente

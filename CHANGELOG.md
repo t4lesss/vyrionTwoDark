@@ -1,5 +1,12 @@
 # Vyrion Two Dark
 
+## 0.2.1
+
+- Títulos em marfim quente e texto principal em off-white mais legível.
+- Textos secundários, abas, listas, campos e números de linha com hierarquia de contraste.
+- Botões em oliva com mais amarelo, com variações próprias de hover e ações secundárias.
+- Links, foco e caixas de seleção alinhados à família de verdes.
+
 ## 0.2.0
 
 - Papel comum para palavras explícitas de função: `def`, `fn`, `function`, `func`.
