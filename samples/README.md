@@ -26,3 +26,9 @@ elemento próximo que deve continuar distinto: `def` versus nome/tipo/`async`,
 da função em C/C++/Dart.
 
 O planejamento fica em [docs/theme-design.md](../docs/theme-design.md).
+
+Para a regra adotada na versão 0.2.0, abra `function-boxes.py`, `function-boxes.rs`,
+`function-boxes.ts` e `function-boxes.go`. As palavras introdutórias devem ter o
+mesmo fundo claro e texto verde; suas ocorrências em comentários e strings
+conservam o estilo correspondente. `async`, nomes, tipos, `class` e `return`
+continuam com seus papéis separados.

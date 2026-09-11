@@ -1,11 +1,13 @@
 # Vyrion Two Dark
 
 Fork incremental do [Atom One Dark](https://github.com/akamud/vscode-theme-onedark)
-para VS Code. A versão inicial 0.1.0 conserva as cores da base 2.3.0.
+para VS Code. A versão 0.2.0 acrescenta caixas claras, com letras verdes e cantos
+arredondados, às palavras que introduzem funções: `def`, `fn`, `function` e `func`.
 
 O arquivo `themes/OneDark.json` pertence à base upstream. As personalizações
 ficam em [themes/VyrionTwoDark-color-theme.json](themes/VyrionTwoDark-color-theme.json),
-que inclui essa base. Ambos acompanham a extensão; ela funciona sem o checkout
+que inclui essa base. O componente em `src/` desenha as caixas pela API de
+decorações do VS Code. Tudo acompanha a extensão; ela funciona sem o checkout
 de referência e pode ser instalada ao lado do Atom One Dark.
 
 ## Workspace
@@ -28,9 +30,9 @@ visuais, TextMate e realce semântico, com exemplos conferidos para Python,
 Rust, TypeScript, Go, C, C++ e Dart/Flutter. As [amostras](samples/README.md)
 organizam a revisão por linguagem.
 
-1. Abra o fork ou o workspace e pressione **F5**, escolhendo
-   **Vyrion Two Dark: experimentar tema**. Não é necessário instalar Node para
-   visualizar este tema estático.
+1. Execute `npm ci` com Node.js 24. Abra o fork ou o workspace e pressione **F5**,
+   escolhendo **Vyrion Two Dark: experimentar tema**. A tarefa compila o componente
+   de decorações antes de abrir a janela.
 2. A janela de desenvolvimento abre `samples/` com **Vyrion Two Dark** selecionado
    nas configurações dessa pasta. Se necessário, use **Preferences: Color Theme**.
 3. Edite `themes/VyrionTwoDark-color-theme.json` no fork. As mudanças de cores são
@@ -39,11 +41,21 @@ organizam a revisão por linguagem.
    Dart/Flutter, além dos componentes da interface afetados.
    Faça um commit pequeno para cada ajuste aprovado.
 
-`colors` controla a interface; `tokenColors` contém regras TextMate.
+`colors` controla a interface e as cores registradas das caixas; `tokenColors`
+contém regras TextMate.
 `semanticTokenColors` pode ser acrescentado para regras semânticas específicas.
 Use **Developer: Inspect Editor Tokens and Scopes** quando uma cor de código
 não corresponder à regra esperada. As configurações pessoais de cores do VS Code
 podem prevalecer sobre o tema.
+
+As caixas funcionam com Python, Rust, TypeScript/TSX, JavaScript/JSX e Go, usando
+as gramáticas instaladas. C, C++ e Dart conservam seus tipos de retorno: eles não
+têm uma palavra equivalente a `def` nas declarações usuais. Veja as amostras
+`samples/function-boxes.*`.
+
+Para desativar somente as caixas, use `"vyrionTwoDark.functionBoxes.enabled": false`.
+Elas também desaparecem ao selecionar outro tema. A instalação do VSIX já contém
+o componente compilado; quem apenas usa o tema não precisa instalar Node/npm.
 
 ## Empacotar e instalar
 

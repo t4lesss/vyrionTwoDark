@@ -2,7 +2,7 @@
   "name": "vyrion-two-dark",
   "displayName": "Vyrion Two Dark",
   "description": "An incremental fork of Atom One Dark, with a separate layer of personal customizations.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "t4lesss",
   "license": "MIT",
   "galleryBanner": {
@@ -31,15 +31,68 @@
         "uiTheme": "vs-dark",
         "path": "./themes/VyrionTwoDark-color-theme.json"
       }
+    ],
+    "configuration": {
+      "title": "Vyrion Two Dark",
+      "properties": {
+        "vyrionTwoDark.functionBoxes.enabled": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "Draw matching boxes around explicit function keywords while Vyrion Two Dark is selected."
+        }
+      }
+    },
+    "colors": [
+      {
+        "id": "vyrionTwoDark.functionBoxBackground",
+        "description": "Background of explicit function keyword boxes.",
+        "defaults": {
+          "dark": "#F2F5E8",
+          "light": "#F2F5E8",
+          "highContrast": "#F2F5E8",
+          "highContrastLight": "#F2F5E8"
+        }
+      },
+      {
+        "id": "vyrionTwoDark.functionBoxForeground",
+        "description": "Text of explicit function keyword boxes.",
+        "defaults": {
+          "dark": "#5F7A32",
+          "light": "#5F7A32",
+          "highContrast": "#5F7A32",
+          "highContrastLight": "#5F7A32"
+        }
+      },
+      {
+        "id": "vyrionTwoDark.functionBoxBorder",
+        "description": "Border of explicit function keyword boxes.",
+        "defaults": {
+          "dark": "#F2F5E8",
+          "light": "#F2F5E8",
+          "highContrast": "#F2F5E8",
+          "highContrastLight": "#F2F5E8"
+        }
+      }
     ]
   },
   "scripts": {
+    "typecheck": "tsc --noEmit",
+    "compile": "npm run typecheck && esbuild src/extension.ts --bundle --platform=node --format=cjs --target=node22 --external:vscode --loader:.wasm=file --outdir=dist",
+    "vscode:prepublish": "npm run compile",
     "package": "vsce package --no-dependencies --out vyrion-two-dark.vsix",
     "package:list": "vsce ls --no-dependencies",
-    "install:local": "npm run package && code --install-extension vyrion-two-dark.vsix --force"
+    "install:local": "npm run package && code --install-extension vyrion-two-dark.vsix --force",
+    "compile:tests": "esbuild tests/smoke.ts --bundle --platform=node --format=cjs --target=node22 --external:vscode --loader:.wasm=file --outdir=.vscode-test/compiled"
   },
   "devDependencies": {
-    "@vscode/vsce": "3.9.2"
+    "@types/node": "22.20.2",
+    "@types/vscode": "1.136.0",
+    "@vscode/vsce": "3.9.2",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2",
+    "vscode-oniguruma": "2.0.1",
+    "vscode-textmate": "9.3.2"
   },
   "bugs": {
     "url": "https://github.com/t4lesss/vyrionTwoDark/issues"
@@ -48,5 +101,18 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/t4lesss/vyrionTwoDark.git"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
   }
 }

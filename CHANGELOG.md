@@ -1,5 +1,13 @@
 # Vyrion Two Dark
 
+## 0.2.0
+
+- Papel comum para palavras explícitas de função: `def`, `fn`, `function`, `func`.
+- Caixas com fundo quase branco, texto verde em negrito e raio de 5 px.
+- Reconhecimento por gramática, com estado de strings/comentários entre linhas.
+- Opção para desativar as caixas; aplicação restrita ao tema Vyrion Two Dark.
+- Componente de decorações e Oniguruma incluídos no VSIX; compilação integrada ao F5.
+
 ## 0.1.0
 
 - Fork com identidade própria e base Atom One Dark 2.3.0 preservada.

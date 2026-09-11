@@ -130,4 +130,31 @@ code vyrionTwoDark.code-workspace
 `origem/` pode ser recriado sem perder suas mudanças, que vivem no fork. O arquivo
 de workspace usa caminhos relativos e abre os dois repositórios separadamente.
 Em uma máquina nova, configure também sua identidade Git antes do primeiro
-commit. Node/npm são ferramentas de empacotamento; o tema não executa JavaScript.
+commit. Node/npm compilam e empacotam o componente de decorações. O VSIX contém
+JavaScript e WebAssembly para executar as caixas no VS Code desktop.
+
+## Alterar as caixas
+
+As cores ficam em `themes/VyrionTwoDark-color-theme.json`. O desenho e o lifecycle
+ficam em `src/extension.ts`; o mapeamento de palavras/escopos fica em
+`src/function-keywords.ts`. Veja o contrato em [theme-design.md](theme-design.md).
+Mudanças nas cores recarregam ao vivo em F5. Para mudanças no componente, compile
+e reinicie a sessão de depuração. `npm run package` sempre compila antes de empacotar.
+
+Para executar os testes de gramática em um VS Code desktop com seus built-ins:
+
+```bash
+npm run compile
+npm run compile:tests
+code --new-window --user-data-dir "$PWD/.vscode-test/manual/user" \
+  --extensions-dir "$PWD/.vscode-test/manual/extensions" \
+  --disable-workspace-trust --skip-welcome --skip-release-notes \
+  --extensionDevelopmentPath="$PWD" \
+  --extensionTestsPath="$PWD/.vscode-test/compiled/smoke.js"
+```
+
+O log da janela deve conter `VYRION_BOXES_PASS`. A saída do launcher sozinha não
+confirma os testes. `VYRION_TEST_OUTPUT` pode apontar para uma pasta local para
+gravar o resultado JSON. Em F5, confira também as quatro amostras
+`function-boxes.*`, troque de tema, desative a opção e abra/feche uma string
+multilinha antes de uma função. As caixas devem acompanhar essas mudanças.

@@ -2,6 +2,10 @@
   "$schema": "vscode://schemas/color-theme",
   "name": "Vyrion Two Dark",
   "include": "./OneDark.json",
-  "colors": {},
+  "colors": {
+    "vyrionTwoDark.functionBoxBackground": "#F2F5E8",
+    "vyrionTwoDark.functionBoxForeground": "#5F7A32",
+    "vyrionTwoDark.functionBoxBorder": "#F2F5E8"
+  },
   "tokenColors": []
 }

@@ -2,6 +2,14 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Vyrion Two Dark: compilar",
+      "type": "npm",
+      "script": "compile",
+      "problemMatcher": [
+        "$tsc"
+      ]
+    },
+    {
       "label": "Vyrion Two Dark: empacotar",
       "type": "npm",
       "script": "package",

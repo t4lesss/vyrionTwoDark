@@ -9,7 +9,8 @@
       "args": [
         "--extensionDevelopmentPath=${workspaceFolder}",
         "${workspaceFolder}/samples"
-      ]
+      ],
+      "preLaunchTask": "Vyrion Two Dark: compilar"
     }
   ]
 }

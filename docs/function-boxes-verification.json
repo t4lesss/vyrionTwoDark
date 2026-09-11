@@ -1,0 +1,174 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-09-11T01:58:57.539Z",
+  "vscode": "1.136.1",
+  "version": "0.2.0",
+  "vsixSha256": "cf367bda894a56046699c07945fc8ecc352314462afaa05a8cf44eb866f4e903",
+  "vsixEntries": 12,
+  "installedRuntimeMatchesPackage": true,
+  "upstreamThemeSha256": "9cba08f30e9f249ed5d00a33a582533cc611d9360e61973dcaddcad3f7ac8d7c",
+  "grammarFixtures": [
+    {
+      "language": "python",
+      "keywords": [
+        "def",
+        "def"
+      ]
+    },
+    {
+      "language": "rust",
+      "keywords": [
+        "fn"
+      ]
+    },
+    {
+      "language": "typescript",
+      "keywords": [
+        "function"
+      ]
+    },
+    {
+      "language": "typescriptreact",
+      "keywords": [
+        "function"
+      ]
+    },
+    {
+      "language": "javascript",
+      "keywords": [
+        "function"
+      ]
+    },
+    {
+      "language": "javascriptreact",
+      "keywords": [
+        "function"
+      ]
+    },
+    {
+      "language": "go",
+      "keywords": [
+        "func",
+        "func"
+      ]
+    },
+    {
+      "language": "c",
+      "keywords": []
+    },
+    {
+      "language": "cpp",
+      "keywords": []
+    },
+    {
+      "language": "dart",
+      "keywords": []
+    }
+  ],
+  "incrementalChecks": [
+    "multiline string open/close",
+    "line insertion",
+    "cancellation",
+    "long line stop"
+  ],
+  "renderedChecks": [
+    {
+      "phase": "py",
+      "boxes": 3,
+      "words": [
+        "def",
+        "def",
+        "def"
+      ]
+    },
+    {
+      "phase": "rs",
+      "boxes": 2,
+      "words": [
+        "fn",
+        "fn"
+      ]
+    },
+    {
+      "phase": "ts",
+      "boxes": 2,
+      "words": [
+        "function",
+        "function"
+      ]
+    },
+    {
+      "phase": "go",
+      "boxes": 2,
+      "words": [
+        "func",
+        "func"
+      ]
+    },
+    {
+      "phase": "disabled",
+      "boxes": 0,
+      "words": []
+    },
+    {
+      "phase": "enabled",
+      "boxes": 3,
+      "words": [
+        "def",
+        "def",
+        "def"
+      ]
+    },
+    {
+      "phase": "other-theme",
+      "boxes": 0,
+      "words": []
+    },
+    {
+      "phase": "theme-restored",
+      "boxes": 3,
+      "words": [
+        "def",
+        "def",
+        "def"
+      ]
+    },
+    {
+      "phase": "plaintext",
+      "boxes": 0,
+      "words": []
+    },
+    {
+      "phase": "python-restored",
+      "boxes": 3,
+      "words": [
+        "def",
+        "def",
+        "def"
+      ]
+    },
+    {
+      "phase": "multiline-edit",
+      "boxes": 0,
+      "words": []
+    },
+    {
+      "phase": "reverted",
+      "boxes": 3,
+      "words": [
+        "def",
+        "def",
+        "def"
+      ]
+    }
+  ],
+  "visualStyle": {
+    "element": "DIV",
+    "background": "rgb(242, 245, 232)",
+    "border": "1px solid rgb(242, 245, 232)",
+    "radius": "5px",
+    "text": "def",
+    "color": "rgb(95, 122, 50)",
+    "weight": "700"
+  }
+}
