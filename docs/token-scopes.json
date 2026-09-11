@@ -1,0 +1,409 @@
+{
+  "vscode_version": "1.136.1",
+  "scope": "Bundled TextMate grammars; no semantic tokens or third-party grammars.",
+  "examples": [
+    {
+      "language": "Python",
+      "source": "def fail(message: str) -> int: return 1",
+      "grammar": "python/syntaxes/MagicPython.tmLanguage.json",
+      "tokens": [
+        {
+          "text": "def",
+          "scopes": [
+            "source.python",
+            "meta.function.python",
+            "storage.type.function.python"
+          ]
+        },
+        {
+          "text": "fail",
+          "scopes": [
+            "source.python",
+            "meta.function.python",
+            "entity.name.function.python"
+          ]
+        },
+        {
+          "text": "message",
+          "scopes": [
+            "source.python",
+            "meta.function.python",
+            "meta.function.parameters.python",
+            "variable.parameter.function.language.python"
+          ]
+        },
+        {
+          "text": "str",
+          "scopes": [
+            "source.python",
+            "meta.function.python",
+            "meta.function.parameters.python",
+            "support.type.python"
+          ]
+        },
+        {
+          "text": "int",
+          "scopes": [
+            "source.python",
+            "meta.function.python",
+            "support.type.python"
+          ]
+        },
+        {
+          "text": "return",
+          "scopes": [
+            "source.python",
+            "keyword.control.flow.python"
+          ]
+        }
+      ],
+      "grammar_sha256": "a8ec27ce79ecb1fda05783d47636efee45413565f62dd15a2ebc41d7f0d716a0"
+    },
+    {
+      "language": "Python async",
+      "source": "async def fail(): pass",
+      "grammar": "python/syntaxes/MagicPython.tmLanguage.json",
+      "tokens": [
+        {
+          "text": "async",
+          "scopes": [
+            "source.python",
+            "meta.function.python",
+            "storage.type.function.async.python"
+          ]
+        },
+        {
+          "text": "def",
+          "scopes": [
+            "source.python",
+            "meta.function.python",
+            "storage.type.function.python"
+          ]
+        },
+        {
+          "text": "fail",
+          "scopes": [
+            "source.python",
+            "meta.function.python",
+            "entity.name.function.python"
+          ]
+        }
+      ],
+      "grammar_sha256": "a8ec27ce79ecb1fda05783d47636efee45413565f62dd15a2ebc41d7f0d716a0"
+    },
+    {
+      "language": "Rust",
+      "source": "fn fail(message: &str) -> i32 { return 1; }",
+      "grammar": "rust/syntaxes/rust.tmLanguage.json",
+      "tokens": [
+        {
+          "text": "fn",
+          "scopes": [
+            "source.rust",
+            "meta.function.definition.rust",
+            "keyword.other.fn.rust"
+          ]
+        },
+        {
+          "text": "fail",
+          "scopes": [
+            "source.rust",
+            "meta.function.definition.rust",
+            "entity.name.function.rust"
+          ]
+        },
+        {
+          "text": "message",
+          "scopes": [
+            "source.rust",
+            "meta.function.definition.rust",
+            "variable.other.rust"
+          ]
+        },
+        {
+          "text": "str",
+          "scopes": [
+            "source.rust",
+            "meta.function.definition.rust",
+            "entity.name.type.primitive.rust"
+          ]
+        },
+        {
+          "text": "i32",
+          "scopes": [
+            "source.rust",
+            "meta.function.definition.rust",
+            "entity.name.type.numeric.rust"
+          ]
+        },
+        {
+          "text": "return",
+          "scopes": [
+            "source.rust",
+            "keyword.control.rust"
+          ]
+        }
+      ],
+      "grammar_sha256": "8e3eb56a36d72b349c01b2a1e6935358ab56eed585b945e3c7fda3226fbaef37"
+    },
+    {
+      "language": "TypeScript",
+      "source": "function fail(message: string): number { return 1; }",
+      "grammar": "typescript-basics/syntaxes/TypeScript.tmLanguage.json",
+      "tokens": [
+        {
+          "text": "function",
+          "scopes": [
+            "source.ts",
+            "meta.function.ts",
+            "storage.type.function.ts"
+          ]
+        },
+        {
+          "text": "fail",
+          "scopes": [
+            "source.ts",
+            "meta.function.ts",
+            "meta.definition.function.ts",
+            "entity.name.function.ts"
+          ]
+        },
+        {
+          "text": "message",
+          "scopes": [
+            "source.ts",
+            "meta.function.ts",
+            "meta.parameters.ts",
+            "variable.parameter.ts"
+          ]
+        },
+        {
+          "text": "string",
+          "scopes": [
+            "source.ts",
+            "meta.function.ts",
+            "meta.parameters.ts",
+            "meta.type.annotation.ts",
+            "support.type.primitive.ts"
+          ]
+        },
+        {
+          "text": "number",
+          "scopes": [
+            "source.ts",
+            "meta.function.ts",
+            "meta.return.type.ts",
+            "support.type.primitive.ts"
+          ]
+        },
+        {
+          "text": "return",
+          "scopes": [
+            "source.ts",
+            "meta.function.ts",
+            "meta.block.ts",
+            "keyword.control.flow.ts"
+          ]
+        }
+      ],
+      "grammar_sha256": "5422ec4b90f842fd729a43e95a5d31e41382c94623fb3c93e127e4ef582998c9"
+    },
+    {
+      "language": "Go",
+      "source": "func fail(message string) int { return 1 }",
+      "grammar": "go/syntaxes/go.tmLanguage.json",
+      "tokens": [
+        {
+          "text": "func",
+          "scopes": [
+            "source.go",
+            "keyword.function.go"
+          ]
+        },
+        {
+          "text": "fail",
+          "scopes": [
+            "source.go",
+            "entity.name.function.go"
+          ]
+        },
+        {
+          "text": "message",
+          "scopes": [
+            "source.go",
+            "variable.parameter.go"
+          ]
+        },
+        {
+          "text": "string",
+          "scopes": [
+            "source.go",
+            "storage.type.string.go"
+          ]
+        },
+        {
+          "text": "int",
+          "scopes": [
+            "source.go",
+            "storage.type.numeric.go"
+          ]
+        },
+        {
+          "text": "return",
+          "scopes": [
+            "source.go",
+            "keyword.control.go"
+          ]
+        }
+      ],
+      "grammar_sha256": "0bc37d9c9d4402fa47254b02c2949ae2b06d143b37b8eda147c3960b2215266d"
+    },
+    {
+      "language": "C",
+      "source": "int fail(int message) { return 1; }",
+      "grammar": "cpp/syntaxes/c.tmLanguage.json",
+      "tokens": [
+        {
+          "text": "int",
+          "scopes": [
+            "source.c",
+            "storage.type.built-in.primitive.c"
+          ]
+        },
+        {
+          "text": "fail",
+          "scopes": [
+            "source.c",
+            "meta.function.c",
+            "meta.function.definition.parameters.c",
+            "entity.name.function.c"
+          ]
+        },
+        {
+          "text": "int",
+          "scopes": [
+            "source.c",
+            "meta.function.c",
+            "meta.function.definition.parameters.c",
+            "storage.type.built-in.primitive.c"
+          ]
+        },
+        {
+          "text": "message",
+          "scopes": [
+            "source.c",
+            "meta.function.c",
+            "meta.function.definition.parameters.c",
+            "variable.parameter.probably.c"
+          ]
+        },
+        {
+          "text": "return",
+          "scopes": [
+            "source.c",
+            "meta.block.c",
+            "keyword.control.c"
+          ]
+        }
+      ],
+      "grammar_sha256": "a4a720d99871e742a021a99f52d5bfd954f64388a45b46d80a29b58fdec1ad6a"
+    },
+    {
+      "language": "C++",
+      "source": "int fail(int message) { return 1; }",
+      "grammar": "cpp/syntaxes/cpp.tmLanguage.json",
+      "tokens": [
+        {
+          "text": "int",
+          "scopes": [
+            "source.cpp",
+            "meta.function.definition.cpp",
+            "meta.qualified-type.cpp",
+            "storage.type.primitive.cpp",
+            "storage.type.built-in.primitive.cpp"
+          ]
+        },
+        {
+          "text": "fail",
+          "scopes": [
+            "source.cpp",
+            "meta.function.definition.cpp",
+            "meta.head.function.definition.cpp",
+            "entity.name.function.definition.cpp"
+          ]
+        },
+        {
+          "text": "int",
+          "scopes": [
+            "source.cpp",
+            "meta.function.definition.cpp",
+            "meta.head.function.definition.cpp",
+            "meta.function.definition.parameters",
+            "meta.parameter.cpp",
+            "storage.type.primitive.cpp",
+            "storage.type.built-in.primitive.cpp"
+          ]
+        },
+        {
+          "text": "message",
+          "scopes": [
+            "source.cpp",
+            "meta.function.definition.cpp",
+            "meta.head.function.definition.cpp",
+            "meta.function.definition.parameters",
+            "meta.parameter.cpp",
+            "variable.parameter.cpp"
+          ]
+        },
+        {
+          "text": "return",
+          "scopes": [
+            "source.cpp",
+            "meta.function.definition.cpp",
+            "meta.body.function.definition.cpp",
+            "keyword.control.return.cpp"
+          ]
+        }
+      ],
+      "grammar_sha256": "5eeac5e63c17589c5cfd4df6e9bd86c4bdbcbabc54460b9c3457815dd52e63ff"
+    },
+    {
+      "language": "Dart",
+      "source": "int fail(String message) { return 1; }",
+      "grammar": "dart/syntaxes/dart.tmLanguage.json",
+      "tokens": [
+        {
+          "text": "int",
+          "scopes": [
+            "source.dart",
+            "support.class.dart"
+          ]
+        },
+        {
+          "text": "fail",
+          "scopes": [
+            "source.dart",
+            "entity.name.function.dart"
+          ]
+        },
+        {
+          "text": "String",
+          "scopes": [
+            "source.dart",
+            "support.class.dart"
+          ]
+        },
+        {
+          "text": "return",
+          "scopes": [
+            "source.dart",
+            "keyword.control.return.dart"
+          ]
+        }
+      ],
+      "grammar_sha256": "0a4dd7c9f32935878adcd2dcc9f4a6e17a139ad446d10bfd45550baee7244e84"
+    }
+  ],
+  "recorded_at_utc": "2026-09-11T01:31:02.860536+00:00",
+  "method": "TextMate tokenizeLine with the VS Code bundled vscode-textmate and vscode-oniguruma packages; exact sample text and scope stacks preserved."
+}

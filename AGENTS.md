@@ -5,6 +5,9 @@ checkout de referência; consulte-a e atualize sua revisão somente pelo fluxo
 de adoção documentado em `docs/development.md`.
 
 - Leia `package.json`, `UPSTREAM.md` e `docs/development.md` antes de editar.
+- Para regras de tokens, consulte `docs/theme-design.md`; o conjunto prioritário
+  é Python, Rust, TypeScript, Go, C, C++ e Dart/Flutter. Os estilos documentados
+  como exemplos continuam propostas até serem escolhidos.
 - Mantenha ajustes próprios em `themes/VyrionTwoDark-color-theme.json`.
 - `themes/OneDark.json` acompanha a base upstream; preserve-o entre atualizações.
 - A extensão deve funcionar e ser empacotada sem acessar a pasta irmã.

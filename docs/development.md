@@ -3,6 +3,10 @@
 Execute os comandos Git e npm abaixo dentro de `modificado/`, salvo quando
 outro diretório estiver indicado. Confirme `git status --short` antes de começar.
 
+Antes de escolher o seletor de uma nova regra, identifique seu papel e alcance
+no [planejamento do tema](theme-design.md). O guia distingue regras comuns,
+exceções por linguagem e realce semântico.
+
 ## Ajuste cotidiano
 
 ```bash

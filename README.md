@@ -22,6 +22,12 @@ A referência permanece na revisão registrada em [UPSTREAM.md](UPSTREAM.md).
 
 ## Experimentar uma mudança
 
+Para decidir se uma regra deve ser comum ou específica de uma linguagem,
+consulte o [planejamento das regras](docs/theme-design.md). Ele separa papéis
+visuais, TextMate e realce semântico, com exemplos conferidos para Python,
+Rust, TypeScript, Go, C, C++ e Dart/Flutter. As [amostras](samples/README.md)
+organizam a revisão por linguagem.
+
 1. Abra o fork ou o workspace e pressione **F5**, escolhendo
    **Vyrion Two Dark: experimentar tema**. Não é necessário instalar Node para
    visualizar este tema estático.
@@ -29,7 +35,8 @@ A referência permanece na revisão registrada em [UPSTREAM.md](UPSTREAM.md).
    nas configurações dessa pasta. Se necessário, use **Preferences: Color Theme**.
 3. Edite `themes/VyrionTwoDark-color-theme.json` no fork. As mudanças de cores são
    aplicadas ao vivo na janela de desenvolvimento.
-4. Confira Python, JSON, Markdown, TOML e os componentes da interface afetados.
+4. Confira as linguagens afetadas entre Python, Rust, TypeScript, Go, C, C++ e
+   Dart/Flutter, além dos componentes da interface afetados.
    Faça um commit pequeno para cada ajuste aprovado.
 
 `colors` controla a interface; `tokenColors` contém regras TextMate.
