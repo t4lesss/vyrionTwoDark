@@ -1,5 +1,13 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.3
+
+- Hover dos botões mais escuro e perceptível; checkbox com o mesmo verde,
+  contorno e marca clara dos botões.
+- Links no tom `#98B09D` extraído da referência, incluindo o tamanho da extensão.
+- Foreground geral em dourado suave para aquecer os títulos da coluna de detalhes
+  e separá-los visualmente dos links frios.
+
 ## 0.2.2-dev.2
 
 - Botões comuns da tela de extensões agora usam o mesmo verde de Run and Debug,

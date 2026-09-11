@@ -20,6 +20,8 @@ de adoção documentado em `docs/development.md`.
   Siga a ordem e os limites de distribuição em `docs/development.md`.
 - Botões comuns e proeminentes da tela de extensões devem compartilhar o verde
   dos botões principais, como Run and Debug. Não os mapear para o fundo secundário.
+- O hover dos botões deve escurecer; o checkbox acompanha o fundo, a marca clara
+  e a borda dos botões. A paleta vigente está em `docs/interface-palette.md`.
 - Para cores, valide JSON, empacote com `npm run package` e confira visualmente
   as linguagens/componentes afetados em F5. Não crie testes que só reproduzam cores.
 - Para a lógica das caixas, execute os casos com gramáticas reais de
