@@ -1,5 +1,10 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.7
+
+- Tom secundário do menu menos saturado no hover, seleção e contorno,
+  preservando a diferença de luminosidade entre os estados.
+
 ## 0.2.2-dev.6
 
 - Menu Features e outras listas passam do oliva para variações escuras do tom
