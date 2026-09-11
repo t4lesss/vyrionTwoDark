@@ -2,7 +2,7 @@
   "name": "vyrion-two-dark",
   "displayName": "Vyrion Two Dark",
   "description": "An incremental fork of Atom One Dark, with a separate layer of personal customizations.",
-  "version": "0.2.1",
+  "version": "0.2.2-dev.1",
   "publisher": "t4lesss",
   "license": "MIT",
   "galleryBanner": {
@@ -83,7 +83,8 @@
     "package": "vsce package --no-dependencies --out vyrion-two-dark.vsix",
     "package:list": "vsce ls --no-dependencies",
     "install:local": "npm run package && code --install-extension vyrion-two-dark.vsix --force",
-    "compile:tests": "esbuild tests/smoke.ts --bundle --platform=node --format=cjs --target=node22 --external:vscode --loader:.wasm=file --outdir=.vscode-test/compiled"
+    "compile:tests": "esbuild tests/smoke.ts --bundle --platform=node --format=cjs --target=node22 --external:vscode --loader:.wasm=file --outdir=.vscode-test/compiled",
+    "version:iteration": "npm version prerelease --preid=dev --no-git-tag-version"
   },
   "devDependencies": {
     "@types/node": "22.20.2",

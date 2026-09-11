@@ -1,5 +1,11 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.1
+
+- Verde dos botões principais extraído da referência: `#6A6E23`.
+- Rótulos quase brancos `#FFFBF0` e variações próximas de hover/ações secundárias.
+- Série local `0.2.2-dev.N` e comando `version:iteration` para refinamentos longos.
+
 ## 0.2.1
 
 - Títulos em marfim quente e texto principal em off-white mais legível.

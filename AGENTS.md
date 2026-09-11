@@ -15,6 +15,9 @@ de adoção documentado em `docs/development.md`.
 - A extensão deve funcionar e ser empacotada sem acessar a pasta irmã.
 - Conserve histórico, licença e créditos; preserve a identidade própria no manifesto.
 - Use commits pequenos e branches de ajuste/atualização. Nunca faça push para upstream.
+- Nas iterações locais, avance apenas `dev.N` com `npm run version:iteration`.
+  A série atual é `0.2.2-dev.N`; reserve versões estáveis para marcos consolidados.
+  Siga a ordem e os limites de distribuição em `docs/development.md`.
 - Para cores, valide JSON, empacote com `npm run package` e confira visualmente
   as linguagens/componentes afetados em F5. Não crie testes que só reproduzam cores.
 - Para a lógica das caixas, execute os casos com gramáticas reais de

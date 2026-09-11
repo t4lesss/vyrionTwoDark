@@ -1,10 +1,14 @@
 # Vyrion Two Dark
 
 Fork incremental do [Atom One Dark](https://github.com/akamud/vscode-theme-onedark)
-para VS Code. A versão 0.2.1 combina texto em off-white quente com botões verde
+para VS Code. A série local `0.2.2-dev.N` combina texto em off-white quente com botões verde
 oliva e preserva as caixas claras das palavras de função: `def`, `fn`, `function`
 e `func`. Os títulos têm um marfim um pouco mais quente, com variações de verde
 para ações principais, secundárias e hover.
+
+O verde principal `#6A6E23` vem da imagem de referência; os rótulos dos botões usam
+`#FFFBF0`, mais claro. Para novas iterações instaláveis, `npm run version:iteration`
+avança somente o contador `dev.N`; os marcos estáveis ficam para consolidações.
 
 O arquivo `themes/OneDark.json` pertence à base upstream. As personalizações
 ficam em [themes/VyrionTwoDark-color-theme.json](themes/VyrionTwoDark-color-theme.json),

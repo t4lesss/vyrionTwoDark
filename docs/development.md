@@ -41,10 +41,43 @@ Para instalar uma iteração aprovada no VS Code de uso cotidiano:
 npm run install:local
 ```
 
-Para uma nova versão distribuível, atualize `CHANGELOG.md` e use, por exemplo,
-`npm version patch --no-git-tag-version`. Isso mantém `package.json` e
-`package-lock.json` sincronizados. Revise, empacote e faça o commit da versão;
-tags e releases são criadas quando houver uma versão que mereça ser marcada.
+## Versionamento com espaço para iterações
+
+A série local atual é **`0.2.2-dev.N`**, iniciada em `0.2.2-dev.1`. O contador
+avança enquanto refinamos o mesmo conjunto: `dev.2`, `dev.3`, `dev.1000` etc.
+Não se aumenta minor ou patch a cada ajuste visual. Os commits preservam cada
+mudança; uma nova versão identifica uma iteração que será instalada/distribuída.
+
+```bash
+npm run version:iteration
+```
+
+O comando usa `npm version prerelease --preid=dev --no-git-tag-version` e mantém
+`package.json` e `package-lock.json` sincronizados. Partindo da série atual,
+avança somente o contador. Atualize também `CHANGELOG.md`, revise e empacote.
+Não crie tag/release do GitHub para cada experimento local.
+
+| Etapa | Exemplo |
+| --- | --- |
+| Último marco estável já instalado | `0.2.1` |
+| Refinamentos locais do próximo marco | `0.2.2-dev.1` → `0.2.2-dev.2` → `0.2.2-dev.1000` |
+| Consolidação deliberada | `0.2.2` |
+| Próximo ciclo, quando fizer sentido | `0.2.3-dev.1` |
+
+Ao consolidar, use `npm version 0.2.2 --no-git-tag-version`. Para iniciar o ciclo
+seguinte, escolha explicitamente `npm version 0.2.3-dev.1 --no-git-tag-version`;
+depois retome `version:iteration`. Minor/major ficam para marcos maiores.
+
+`0.2.1.1` e `0.2.1.1.2` são recusados pelo validador de versões do empacotador.
+O manifesto exige [SemVer](https://code.visualstudio.com/api/references/extension-manifest).
+Começamos em `0.2.2-dev.1` porque `0.2.1-dev.1` seria anterior ao `0.2.1` já
+instalado. Metadados como `+rev.1` não mudam a precedência e não servem como
+contador de atualização.
+
+Este fluxo com sufixo foi verificado com VSIX local. O [Marketplace não aceita
+sufixos SemVer de pré-lançamento](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#pre-release-extensions).
+Para publicar futuramente, use um marco `major.minor.patch` adequado ao canal.
+Nenhum comando de iteração ou instalação local publica no Marketplace.
 
 ## Atualizar a base original
 

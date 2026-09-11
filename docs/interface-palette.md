@@ -1,8 +1,12 @@
-# Interface em marfim e oliva — 0.2.1
+# Interface em marfim e oliva — 0.2.2-dev.1
 
 A referência do usuário foi o cabeçalho da tela de extensões: texto quente,
 iluminado e legível, sem branco puro ou amarelo intenso. Na revisão, ele pediu
 um pouco mais de calor nos títulos e mais amarelo/intensidade no oliva.
+No ajuste seguinte, pediu o verde exato dos botões da referência e rótulos mais
+claros. A amostragem da região interna de ambos os botões principais encontrou
+`#6A6E23` como cor dominante; os rótulos tinham `#EBDBB2`. A paleta agora usa esse
+verde com rótulos `#FFFBF0`.
 
 As cores vivem em `themes/VyrionTwoDark-color-theme.json`. A interface acompanha
 o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
@@ -13,11 +17,11 @@ o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 | Texto principal | `#E8E1D1` | Editor sem cor sintática específica, listas, campos, controles e terminal. |
 | Texto secundário | `#CEC6B6` | Descrições, abas inativas, breadcrumbs e placeholders. |
 | Texto discreto | `#ABA799` | Números de linha e foreground de elementos desativados. |
-| Botão principal | `#5D6724` | Ações principais e ações proeminentes de extensões. |
-| Hover principal | `#67712A` | Oliva mais claro ao passar o mouse. |
-| Texto do botão principal | `#F7F0DC` | Marfim claro sobre o oliva. |
-| Botão secundário | `#3E472D` | Ações como desativar/desinstalar extensões. |
-| Hover secundário | `#4B5534` | Mais luminoso, preservando a diferença para ações principais. |
+| Botão principal | `#6A6E23` | Verde extraído da referência para ações principais/proeminentes. |
+| Hover principal | `#72762A` | Variação próxima e mais clara ao passar o mouse. |
+| Texto dos botões | `#FFFBF0` | Rótulos quase brancos nos botões principais e secundários. |
+| Botão secundário | `#3F412A` | Variação escura para ações como desativar/desinstalar extensões. |
+| Hover secundário | `#4A4D2D` | Mais luminoso, preservando a diferença para ações principais. |
 | Borda dos botões | `#98A34F` | Contorno oliva mais luminoso. |
 | Links / links ativos | `#B9CD83` / `#D2E29F` | Verde claro para navegação. |
 | Foco | `#AABD73` | Identificação do controle que recebe o teclado. |
@@ -42,8 +46,11 @@ Razões calculadas pela luminância relativa sRGB, com cores opacas:
 | Título sobre `#282C34` | 10,72:1 |
 | Texto principal sobre `#282C34` | 10,75:1 |
 | Texto secundário sobre `#282C34` | 8,25:1 |
-| Botão principal normal / hover | 5,38:1 / 4,65:1 |
-| Botão secundário normal / hover | 7,52:1 / 6,09:1 |
+| Botão principal normal / hover | 5,25:1 / 4,68:1 |
+| Botão secundário normal / hover | 10,15:1 / 8,50:1 |
+
+Na imagem de referência, a combinação dominante do rótulo/fundo era 3,96:1.
+Clarear o rótulo eleva esse contraste mantendo o verde principal exato.
 
 Em 10 de setembro de 2026, VS Code desktop 1.136.1 carregou o VSIX 0.2.1
 instalado em um perfil isolado. A leitura do renderer confirmou as cores do
@@ -52,6 +59,14 @@ botões principais normais/hover no Explorer e as cores do editor. As capturas
 das três telas foram examinadas; as três caixas `def` da amostra continuaram
 presentes. O foco visível foi observado no Explorer. Logs, valores computados e
 capturas locais estão em `.vscode-test/interface/`, ignorados pelo Git.
+
+A revisão `0.2.2-dev.1` tem sua conferência e capturas em
+`.vscode-test/buttons-reference/`. Esse diretório também guarda o ensaio isolado
+do comando de versão (`dev.1` → `dev.2`), sem consumir uma iteração do projeto.
+O VS Code 1.136.1 aceitou a instalação local com esse sufixo e exibiu a versão
+na página da extensão. Os botões reais confirmaram o verde e os rótulos novos,
+incluindo hover de ações principais e secundárias; as três caixas da amostra
+Python continuaram presentes.
 
 `npm run package` validou a tipagem e gerou o VSIX com as duas camadas de tema.
 A base upstream e o componente de caixas não foram alterados. Estas medidas
