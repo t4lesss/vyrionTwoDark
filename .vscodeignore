@@ -1,11 +1,22 @@
 .vscode/**
+.github/**
+.vscode-test/**
+node_modules/**
 samples/**
-.gitignore
-tsconfig.json
-vsc-extension-quickstart.md
-Fixing colors.txt
+docs/**
+art/**
 screenshots/**
-gulpfile.js
+.gitignore
+.node-version
+.vscodeignore
+package-lock.json
+AGENTS.md
+UPSTREAM.md
+vsc-extension-quickstart.md
+*.code-workspace
+**/*.vsix
+**/__pycache__/**
 **/*.psd
 **/*.ai
+icon.svg
 themes/OneDark.old.tmTheme

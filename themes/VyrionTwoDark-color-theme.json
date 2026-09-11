@@ -1,0 +1,7 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "Vyrion Two Dark",
+  "include": "./OneDark.json",
+  "colors": {},
+  "tokenColors": []
+}

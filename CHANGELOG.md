@@ -1,3 +1,13 @@
+# Vyrion Two Dark
+
+## 0.1.0
+
+- Fork com identidade própria e base Atom One Dark 2.3.0 preservada.
+- Camada de personalização inicialmente vazia.
+- Workspace com referência, prévia por F5 e empacotamento local.
+
+## Histórico original
+
 The best rated One Dark port now includes Workbench theming!
 
 ## Version 2.3.0

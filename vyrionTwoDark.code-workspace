@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "Vyrion Two Dark",
+      "path": "."
+    },
+    {
+      "name": "Atom One Dark (referência)",
+      "path": "../origem"
+    }
+  ],
+  "settings": {
+    "files.readonlyInclude": {
+      "**/origem/**": true
+    }
+  }
+}

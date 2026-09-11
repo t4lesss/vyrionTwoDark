@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Vyrion Two Dark: empacotar",
+      "type": "npm",
+      "script": "package",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Vyrion Two Dark: instalar localmente",
+      "type": "npm",
+      "script": "install:local",
+      "problemMatcher": []
+    }
+  ]
+}

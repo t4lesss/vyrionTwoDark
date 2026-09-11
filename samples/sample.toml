@@ -1,0 +1,10 @@
+# Amostra visual de configuração.
+[theme]
+name = "Vyrion Two Dark"
+enabled = true
+version = "0.1.0"
+languages = ["python", "json", "markdown", "toml"]
+
+[preview]
+contrast = 1.0
+columns = 100

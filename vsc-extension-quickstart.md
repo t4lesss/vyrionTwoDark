@@ -1,19 +1,8 @@
-# Welcome to your VS Code Extension
+# Vyrion Two Dark: início rápido
 
-## What's in the folder
-* This folder contains all of the files necessary for your extension
-* `package.json` - this is the manifest file that defines the location of the theme file
-and specifies the base theme of the theme
-* `themes/OneDark.json` - the color theme definition file
+O fluxo atual está no [README](README.md) e no
+[guia de desenvolvimento](docs/development.md).
 
-## Get up and running straight away
-* press `F5` to open a new window with your extension loaded
-* open `File > Preferences > Color Themes` and pick your color theme
-
-## Make changes
-* you can relaunch the extension from the debug toolbar after making changes to the files listed above
-* you can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes
-
-## Install your extension
-* To start using your extension with Visual Studio Code copy it into the <user home>/.vscode/extensions folder and restart Code.
-* To share your extension with the world, read on https://code.visualstudio.com/docs about publishing an extension.
+F5 abre a janela de desenvolvimento com as amostras. Edite
+`themes/VyrionTwoDark-color-theme.json`; use `npm run install:local` para gerar
+e instalar uma versão de uso cotidiano.

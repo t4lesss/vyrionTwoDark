@@ -1,0 +1,15 @@
+# Vyrion Two Dark
+
+Este repositório é o fork de desenvolvimento. A pasta irmã `origem/` é um
+checkout de referência; consulte-a e atualize sua revisão somente pelo fluxo
+de adoção documentado em `docs/development.md`.
+
+- Leia `package.json`, `UPSTREAM.md` e `docs/development.md` antes de editar.
+- Mantenha ajustes próprios em `themes/VyrionTwoDark-color-theme.json`.
+- `themes/OneDark.json` acompanha a base upstream; preserve-o entre atualizações.
+- A extensão deve funcionar e ser empacotada sem acessar a pasta irmã.
+- Conserve histórico, licença e créditos; preserve a identidade própria no manifesto.
+- Use commits pequenos e branches de ajuste/atualização. Nunca faça push para upstream.
+- Para cores, valide JSON, empacote com `npm run package` e confira visualmente
+  as linguagens/componentes afetados em F5. Não crie testes que só reproduzam cores.
+- Não publique no Marketplace como parte de um ajuste local de tema.
