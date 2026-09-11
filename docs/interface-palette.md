@@ -1,4 +1,4 @@
-# Interface em marfim e oliva — 0.2.2-dev.3
+# Interface em marfim e oliva — 0.2.2-dev.4
 
 A referência do usuário foi o cabeçalho da tela de extensões: texto quente,
 iluminado e legível, sem branco puro ou amarelo intenso. Na revisão, ele pediu
@@ -13,15 +13,21 @@ usam `#98B09D`, cor dominante do texto da segunda referência. É um tom frio,
 acinzentado, com componente verde; preservamos a amostra escolhida pelo usuário.
 Os títulos dos detalhes recebem dourado suave por meio do foreground geral.
 
+Em `dev.4`, o usuário pediu menos intensidade nos títulos grandes. O foreground
+passa a `#E5D7BC`, um marfim com dourado menos saturado. Os mantenedores da lista
+usam `descriptionForeground`, agora `#ADA89B`; as descrições acompanham a mudança.
+Na linha selecionada, o CSS nativo volta a usar a cor da seleção para ambos.
+
 As cores vivem em `themes/VyrionTwoDark-color-theme.json`. A interface acompanha
 o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 
 | Papel | Cor | Uso |
 | --- | --- | --- |
-| Destaque dourado | `#EAD4AA` | Foreground geral, título da extensão e títulos da coluna de detalhes. |
+| Marfim dourado suave | `#E5D7BC` | Foreground geral, título da extensão e títulos da coluna de detalhes. |
 | Marfim quente | `#EDE0C6` | Seções da barra lateral, abas ativas e barra de título. |
 | Texto principal | `#E8E1D1` | Editor sem cor sintática específica, listas, campos, controles e terminal. |
-| Texto secundário | `#CEC6B6` | Descrições, abas inativas, breadcrumbs e placeholders. |
+| Texto secundário | `#CEC6B6` | Abas inativas, breadcrumbs e placeholders. |
+| Descrições e mantenedores | `#ADA89B` | Descrições gerais e nome do mantenedor na lista de extensões sem seleção. |
 | Texto discreto | `#ABA799` | Números de linha e foreground de elementos desativados. |
 | Botão principal | `#6A6E23` | Verde da referência para ações principais e todos os botões da tela de extensões. |
 | Hover principal | `#4B4F18` | Oliva mais escuro, perceptível ao passar o mouse. |
@@ -57,9 +63,10 @@ Razões calculadas pela luminância relativa sRGB, com cores opacas:
 
 | Combinação | Contraste |
 | --- | ---: |
-| Título dourado sobre `#282C34` | 9,66:1 |
+| Título em marfim dourado sobre `#282C34` | 9,85:1 |
 | Texto principal sobre `#282C34` | 10,75:1 |
 | Texto secundário sobre `#282C34` | 8,25:1 |
+| Descrição sobre `#282C34` / mantenedor sobre `#21252B` | 5,90:1 / 6,49:1 |
 | Botão principal normal / hover | 5,25:1 / 8,36:1 |
 | Botão secundário normal / hover | 10,15:1 / 12,85:1 |
 | Link normal / ativo sobre `#282C34` | 6,02:1 / 8,29:1 |
@@ -97,6 +104,13 @@ fork instalado e do Atom One Dark no Marketplace. As capturas foram examinadas
 e as três caixas Python continuam presentes. Evidência local em
 `.vscode-test/hover-links-details/`. A página do Marketplace foi apenas aberta
 para conferência, sem instalar ou publicar outra extensão.
+
+Em `0.2.2-dev.4`, foram examinados o título grande, os títulos de detalhes e
+o mantenedor real Mahmoud Ali na lista. O renderer confirmou `#E5D7BC` nos
+títulos e `#ADA89B` no mantenedor/descrição normal e em hover, preservando
+`#E8E1D1` no nome da extensão. A seleção foi conferida separadamente: ela
+reaplica a mesma cor clara aos três textos, como determina o CSS nativo.
+Capturas e resultados em `.vscode-test/soft-titles-publishers/`.
 
 `npm run package` validou a tipagem e gerou o VSIX com as duas camadas de tema.
 A base upstream e o componente de caixas não foram alterados. Estas medidas

@@ -1,5 +1,11 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.4
+
+- Dourado menos saturado, mais próximo de marfim nos títulos grandes.
+- Mantenedores e descrições com menos contraste na lista de extensões;
+  a linha selecionada conserva o destaque nativo.
+
 ## 0.2.2-dev.3
 
 - Hover dos botões mais escuro e perceptível; checkbox com o mesmo verde,
