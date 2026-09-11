@@ -1,4 +1,4 @@
-# Interface em marfim e oliva — 0.2.2-dev.4
+# Interface em marfim e oliva — 0.2.2-dev.5
 
 A referência do usuário foi o cabeçalho da tela de extensões: texto quente,
 iluminado e legível, sem branco puro ou amarelo intenso. Na revisão, ele pediu
@@ -18,6 +18,13 @@ passa a `#E5D7BC`, um marfim com dourado menos saturado. Os mantenedores da list
 usam `descriptionForeground`, agora `#ADA89B`; as descrições acompanham a mudança.
 Na linha selecionada, o CSS nativo volta a usar a cor da seleção para ambos.
 
+Em `dev.5`, os links ganham luminosidade e saturação moderadas: `#9FC6B1` no
+estado normal e `#BEDDCC` no hover. O menu vertical de Features usa as cores
+nativas de listas: hover `#3D4535`, seleção/foco `#555F2B`, texto `#FFFBF0` e
+contorno de foco `#98A34F`. A seleção conserva o fundo quando o menu perde foco.
+Essas regras também afetam outras listas, incluindo Explorer e extensões;
+o VS Code não expõe um conjunto de cores exclusivo desse menu.
+
 As cores vivem em `themes/VyrionTwoDark-color-theme.json`. A interface acompanha
 o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 
@@ -35,7 +42,10 @@ o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 | Botão secundário | `#3F412A` | Variação escura para controles secundários comuns, fora da tela de extensões. |
 | Hover secundário | `#2F311F` | Variação mais escura do botão secundário. |
 | Borda dos botões | `#98A34F` | Contorno oliva mais luminoso. |
-| Links / links ativos | `#98B09D` / `#B6CDBB` | Tom da segunda referência; inclui o link SIZE na página de extensões. |
+| Links / links ativos | `#9FC6B1` / `#BEDDCC` | Variação mais luminosa e saturada da referência; inclui SIZE. |
+| Hover de listas | `#3D4535` | Oliva discreto, visível sobre as superfícies escuras. |
+| Seleção / foco de listas | `#555F2B` | Oliva mais marcado no item ativo, mesmo sem foco no menu. |
+| Texto / contorno de listas em destaque | `#FFFBF0` / `#98A34F` | Texto claro e contorno de foco. |
 | Foco | `#AABD73` | Identificação do controle que recebe o teclado. |
 
 O título da extensão e Installation, Marketplace, Categories e Resources não
@@ -69,7 +79,8 @@ Razões calculadas pela luminância relativa sRGB, com cores opacas:
 | Descrição sobre `#282C34` / mantenedor sobre `#21252B` | 5,90:1 / 6,49:1 |
 | Botão principal normal / hover | 5,25:1 / 8,36:1 |
 | Botão secundário normal / hover | 10,15:1 / 12,85:1 |
-| Link normal / ativo sobre `#282C34` | 6,02:1 / 8,29:1 |
+| Link normal / ativo sobre `#282C34` | 7,46:1 / 9,60:1 |
+| Texto de lista em hover / seleção | 9,67:1 / 6,64:1 |
 
 Na imagem de referência, a combinação dominante do rótulo/fundo era 3,96:1.
 Clarear o rótulo eleva esse contraste mantendo o verde principal exato.
@@ -111,6 +122,13 @@ títulos e `#ADA89B` no mantenedor/descrição normal e em hover, preservando
 `#E8E1D1` no nome da extensão. A seleção foi conferida separadamente: ela
 reaplica a mesma cor clara aos três textos, como determina o CSS nativo.
 Capturas e resultados em `.vscode-test/soft-titles-publishers/`.
+
+Em `0.2.2-dev.5`, o menu real de Features da extensão JavaScript/TypeScript
+confirmou hover em Commands, seleção com contorno, Settings em hover enquanto
+Commands permanecia ativo e seleção preservada após perder foco. SIZE normal
+e em hover foi conferido na página do fork. Capturas examinadas e resultados
+em `.vscode-test/features-menu-links/`. A coleta lê o rótulo visível do item,
+pois o DOM também contém textos de estado ocultos.
 
 `npm run package` validou a tipagem e gerou o VSIX com as duas camadas de tema.
 A base upstream e o componente de caixas não foram alterados. Estas medidas

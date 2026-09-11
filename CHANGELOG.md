@@ -1,5 +1,11 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.5
+
+- Hover e seleção do menu Features mais visíveis, com fundos oliva distintos
+  e contorno de foco. Outras listas acompanham as cores nativas compartilhadas.
+- Links mais luminosos e saturados, incluindo SIZE, preservando o tom frio.
+
 ## 0.2.2-dev.4
 
 - Dourado menos saturado, mais próximo de marfim nos títulos grandes.
