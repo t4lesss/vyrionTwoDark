@@ -1,5 +1,12 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.10
+
+- Dourado de código em linha levemente mais luminoso (`#DDC184`), preservando
+  os títulos e os links.
+- Abas ativas dos painéis, incluindo Chat/Codex, acompanham o fundo `#3B413E`
+  do editor moderno. O destaque dos ícones da barra de atividades fica preservado.
+
 ## 0.2.2-dev.9
 
 - Corrige o alvo do ajuste: fundo da aba ativa arredondada em `#3B413E`,
