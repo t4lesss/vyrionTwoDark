@@ -12,6 +12,7 @@
     "sideBarTitle.foreground": "#EDE0C6",
     "sideBarSectionHeader.foreground": "#EDE0C6",
     "activityBar.foreground": "#E8E1D1",
+    "badge.background": "#2E9CA0",
     "tab.activeForeground": "#EDE0C6",
     "titleBar.activeForeground": "#EDE0C6",
     "statusBar.foreground": "#E8E1D1",

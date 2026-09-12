@@ -1,5 +1,11 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.12
+
+- Contadores como Installed e Recommended em `#2E9CA0`, pela cor nativa
+  `badge.background`. Os badges dos ícones da barra de atividades continuam
+  independentes, no azul `#528BFF` da base.
+
 ## 0.2.2-dev.11
 
 - Estrelas de avaliação das extensões em `#F99551`, pela cor nativa

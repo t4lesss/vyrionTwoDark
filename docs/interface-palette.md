@@ -1,4 +1,11 @@
-# Interface em marfim e oliva — 0.2.2-dev.11
+# Interface em marfim e oliva — 0.2.2-dev.12
+
+Em `dev.12`, os contadores Installed e Recommended usam `#2E9CA0` por
+`badge.background`. Essa chave é compartilhada com outros contadores comuns;
+não existe uma cor nativa exclusiva dessas duas seções. Os badges dos ícones
+na barra de atividades usam `activityBarBadge.background`, que continua
+herdando `#528BFF` da base, independentemente dos contadores. O texto de ambos
+continua `#D7DAE0`.
 
 Em `dev.11`, as estrelas de avaliação das extensões usam `#F99551`, por meio
 de `extensionIcon.starForeground`. É uma cor própria dos ícones de avaliação.
@@ -77,6 +84,8 @@ o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 | Links / links ativos | `#9FC6B1` / `#BEDDCC` | Variação mais luminosa e saturada da referência; inclui SIZE. |
 | Código em linha | `#DDC184` | Dourado discretamente mais luminoso em trechos como `Pick Color`. Links formatados como código conservam a cor dos links. |
 | Estrelas de avaliação | `#F99551` | Ícones de avaliação das extensões (`extensionIcon.starForeground`). |
+| Contadores comuns | `#2E9CA0` | Installed, Recommended e outros badges que usam `badge.background`. |
+| Badges da barra de atividades | `#528BFF` | Contadores nos ícones laterais; cor independente herdada da base. |
 | Hover de listas | `#394842` | Variação escura e menos saturada do tom secundário. |
 | Seleção / foco de listas | `#495E55` | Tom secundário mais marcado no item ativo, mesmo sem foco no menu. |
 | Texto / contorno de listas em destaque | `#FFFBF0` / `#A5C0B1` | Texto claro e contorno secundário suavizado. |
@@ -203,6 +212,12 @@ vazios conservam o estilo nativo. O JSON mudou somente nessa propriedade;
 capturas antes/depois e leitura do renderer estão em `.vscode-test/extension-stars/`.
 
 `npm run package` validou a tipagem e gerou o VSIX com as duas camadas de tema.
+Em `dev.12`, Installed e Recommended no VS Code 1.137.0 carregaram
+`#2E9CA0`. A leitura dos elementos nativos da barra de atividades confirmou
+`#528BFF`, com texto de ambos preservado em `#D7DAE0`. O JSON alterou somente
+`badge.background`; botões, links e abas conservaram suas cores. Capturas
+antes/depois examinadas e valores computados em `.vscode-test/count-badges/`.
+
 A base upstream e o componente de caixas não foram alterados. Estas medidas
 cobrem as combinações indicadas; conforto de leitura continua sendo uma escolha
 visual a ajustar com o uso. Não é uma auditoria de todos os tokens do tema.
