@@ -1,5 +1,10 @@
 # Vyrion Two Dark
 
+## 0.2.2-dev.11
+
+- Estrelas de avaliação das extensões em `#F99551`, pela cor nativa
+  `extensionIcon.starForeground`.
+
 ## 0.2.2-dev.10
 
 - Dourado de código em linha levemente mais luminoso (`#DDC184`), preservando

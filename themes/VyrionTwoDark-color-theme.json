@@ -67,6 +67,7 @@
     "extensionButton.hoverBackground": "#4B4F18",
     "extensionButton.border": "#98A34F",
     "extensionButton.separator": "#B9C887",
+    "extensionIcon.starForeground": "#F99551",
     "checkbox.background": "#6A6E23",
     "checkbox.foreground": "#FFFBF0",
     "checkbox.border": "#98A34F",

@@ -1,4 +1,7 @@
-# Interface em marfim e oliva — 0.2.2-dev.10
+# Interface em marfim e oliva — 0.2.2-dev.11
+
+Em `dev.11`, as estrelas de avaliação das extensões usam `#F99551`, por meio
+de `extensionIcon.starForeground`. É uma cor própria dos ícones de avaliação.
 
 Em `dev.10`, o código em linha, como `Pick Color`, usa `#DDC184`, ligeiramente
 mais luminoso que o padrão nativo `#D7BA7D`. Os títulos mantêm suas cores.
@@ -73,6 +76,7 @@ o editor `#282C34`, a barra lateral `#21252B` e as demais superfícies da base.
 | Borda dos botões | `#98A34F` | Contorno oliva mais luminoso. |
 | Links / links ativos | `#9FC6B1` / `#BEDDCC` | Variação mais luminosa e saturada da referência; inclui SIZE. |
 | Código em linha | `#DDC184` | Dourado discretamente mais luminoso em trechos como `Pick Color`. Links formatados como código conservam a cor dos links. |
+| Estrelas de avaliação | `#F99551` | Ícones de avaliação das extensões (`extensionIcon.starForeground`). |
 | Hover de listas | `#394842` | Variação escura e menos saturada do tom secundário. |
 | Seleção / foco de listas | `#495E55` | Tom secundário mais marcado no item ativo, mesmo sem foco no menu. |
 | Texto / contorno de listas em destaque | `#FFFBF0` / `#A5C0B1` | Texto claro e contorno secundário suavizado. |
@@ -192,6 +196,11 @@ ao editor. Foram comparados os títulos, a aba inativa e as cores compartilhadas
 de links, botões, listas e ícones da barra de atividades. Capturas antes/depois
 examinadas e resultados locais em `.vscode-test/inline-chat/`. O cabeçalho foi
 validado com a aba nativa Chat; Codex usa o mesmo controle de abas do painel.
+
+Em `dev.11`, a página real de Color Picker no VS Code 1.137.0 confirmou
+`#F99551` nas estrelas cheias e na meia estrela, antes em `#FF8E00`. Os contornos
+vazios conservam o estilo nativo. O JSON mudou somente nessa propriedade;
+capturas antes/depois e leitura do renderer estão em `.vscode-test/extension-stars/`.
 
 `npm run package` validou a tipagem e gerou o VSIX com as duas camadas de tema.
 A base upstream e o componente de caixas não foram alterados. Estas medidas
