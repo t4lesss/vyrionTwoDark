@@ -1,6 +1,0 @@
-/* Personal typography; editor/terminal font variables remain independent. */
-body {
-  --vscode-font-family: "IBM Plex Sans", system-ui, sans-serif !important;
-  font-family: var(--vscode-font-family);
-}
-body h1, body h2, body h3 { font-weight: 600; }

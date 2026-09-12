@@ -1,6 +1,0 @@
-/* Personal UI typography; no colors or editor/terminal font rules. */
-.monaco-workbench.linux { font-family: "IBM Plex Sans", system-ui, sans-serif; }
-
-/* Approved title hierarchy. */
-.monaco-workbench.linux .extension-editor .header .name { font-weight: 700 !important; }
-.monaco-workbench.linux .extension-editor .additional-details-title { font-weight: 600 !important; }
